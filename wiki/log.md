@@ -35,3 +35,9 @@
 - changed: appended official docs, high-frequency usage, and extensibility sections to Etcd, RabbitMQ, NFS, Cgroup, Tmux, Grep, Homebrew, ACME, BIND, Domain Certificate, and VFS handbook pages; added concept pages for DNS resolution, message queue patterns, Linux process management, and container orchestration; updated `wiki/index.md`
 - unresolved: some official doc URLs (NFS, cgroup, tmux, grep) were inaccessible from this environment; used alternative official references (man7.org, GitHub wiki, kernel.org)
 - next: cross-link handbook pages to concept pages; add more entity pages (e.g., specific tools, services) as usage patterns emerge
+
+## 2026-06-07 09:30 UTC | enrich acme.sh handbook
+- scope: rewrite and expand the acme.sh handbook page with official wiki content
+- changed: expanded from ~80 lines to ~300 lines; added validation modes (HTTP-01/DNS-01/ALPN-01 with webroot/standalone/nginx/manual/API details), DNS API provider table with env vars for 14 popular providers, deploy hooks (Nginx/Apache/HAProxy/SSH/other), certificate algorithms (ECC/RSA), CA providers, configuration directory structure, and troubleshooting guide; added DNS alias mode and DNS persist mode references
+- unresolved: DNS persist mode is newer and less documented upstream; may need more examples when adoption grows
+- next: add cross-links from DNS resolution concept page to acme.sh; consider adding a cert-manager page for Kubernetes environments
