@@ -156,3 +156,20 @@ $
 \\>
 
 ```
+
+## Official Docs & Extensibility
+
+- Official docs
+  - GNU Grep manual: [https://www.gnu.org/software/grep/manual/](https://www.gnu.org/software/grep/manual/)
+  - ripgrep (rg): [https://github.com/BurntSushi/ripgrep](https://github.com/BurntSushi/ripgrep)
+  - grep(1) man page: [https://man7.org/linux/man-pages/man1/grep.1.html](https://man7.org/linux/man-pages/man1/grep.1.html)
+
+- High-frequency entry points
+  - `-r` (recursive), `-i` (case-insensitive), `-n` (line numbers), `-l` (files only) cover 90% of daily use.
+  - `-E` (extended regex) and `-P` (PCRE) are the two regex modes; know when each is needed.
+  - `grep -v` (invert match) and `grep -c` (count) are underrated for quick filtering.
+
+- Extensible directions
+  - Recommend ripgrep (`rg`) as the modern alternative for code search: faster, respects `.gitignore`, and has better defaults.
+  - Add `grep` pipeline patterns with `xargs`, `find`, and `awk/sed` for complex text processing.
+  - Cover performance tips: `--include`/`--exclude` filters, binary file handling, and locale effects.

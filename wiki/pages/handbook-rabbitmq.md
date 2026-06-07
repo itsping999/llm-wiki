@@ -367,3 +367,21 @@ HAPROXY 是一个开源的、高性能负载均衡软件，它支持 4 层代
 HAPROXY 可以很容易地与 RABBITMQ 进行整合，同时可以搭配 KEEPALIVED 能够确保 CLUSTER 的高可用性；
 
 # **DONE**
+
+## Official Docs & Extensibility
+
+- Official docs
+  - RabbitMQ documentation: [https://www.rabbitmq.com/docs](https://www.rabbitmq.com/docs)
+  - RabbitMQ tutorials: [https://www.rabbitmq.com/tutorials](https://www.rabbitmq.com/tutorials)
+  - Management CLI reference: [https://www.rabbitmq.com/docs/management-cli](https://www.rabbitmq.com/docs/management-cli)
+  - AMQP 0-9-1 protocol concepts: [https://www.rabbitmq.com/tutorials/amqp-concepts](https://www.rabbitmq.com/tutorials/amqp-concepts)
+
+- High-frequency entry points
+  - Exchanges, queues, and bindings are the core mental model; get comfortable with exchange types (direct, fanout, topic, headers) before diving into plugins.
+  - Use `rabbitmqctl list_queues`, `rabbitmqctl list_exchanges`, and the management UI for runtime inspection.
+  - Dead letter exchanges (DLX) and TTL are the standard patterns for handling failed messages.
+
+- Extensible directions
+  - Add quorum queues and stream queues for modern high-availability use cases.
+  - Explore federation and shovel plugins for cross-cluster messaging.
+  - Add monitoring with Prometheus plugin and alerting on queue depth/consumer count.

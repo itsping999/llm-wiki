@@ -92,3 +92,20 @@ acme.sh --issue -d {{DOMAIN}} --keylength {{ALGORITHM}}
 # renew certificate using dns mode
 acme.sh --renew --dns {{DNS_API}} -d {{DOMAIN}}
 ```
+
+## Official Docs & Extensibility
+
+- Official docs
+  - acme.sh wiki: [https://github.com/acmesh-official/acme.sh/wiki](https://github.com/acmesh-official/acme.sh/wiki)
+  - acme.sh DNS API: [https://github.com/acmesh-official/acme.sh/wiki/dnsapi](https://github.com/acmesh-official/acme.sh/wiki/dnsapi)
+  - Let's Encrypt documentation: [https://letsencrypt.org/docs/](https://letsencrypt.org/docs/)
+
+- High-frequency entry points
+  - `acme.sh --issue` with `-d` flags is the core issuance command; pair it with `--deploy` for auto-reload.
+  - DNS-01 validation is the standard for wildcard certificates; HTTP-01 is simpler but limited.
+  - Cron-based auto-renewal is built in; verify with `acme.sh --cron`.
+
+- Extensible directions
+  - Add DNS API integration patterns for Cloudflare, Aliyun DNS, and Route53.
+  - Cover deploy hooks for Nginx, Apache, HAProxy, and load balancers.
+  - Add troubleshooting: rate limits, staging environment testing, and certificate chain issues.

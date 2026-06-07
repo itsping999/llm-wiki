@@ -151,3 +151,20 @@ brew bundle dump --describe --force --file="~/brewfile"
 brew bundle --file="~/brewfile"
 
 ```
+
+## Official Docs & Extensibility
+
+- Official docs
+  - Homebrew documentation: [https://docs.brew.sh/](https://docs.brew.sh/)
+  - Formula cookbook: [https://docs.brew.sh/Formula-Cookbook](https://docs.brew.sh/Formula-Cookbook)
+  - Cask reference: [https://docs.brew.sh/Cask-Cookbook](https://docs.brew.sh/Cask-Cookbook)
+
+- High-frequency entry points
+  - `brew install`, `brew upgrade`, `brew cleanup`, and `brew doctor` are the daily commands.
+  - `brew list --formula` vs `brew list --cask` separates CLI tools from GUI apps.
+  - `brew services start/stop/list` manages background services (Redis, PostgreSQL, Nginx, etc.).
+
+- Extensible directions
+  - Add tap management for third-party formulae and custom repositories.
+  - Cover `brew bundle` and Brewfile for reproducible environment setup.
+  - Add troubleshooting: broken links, permission issues, and Rosetta 2 considerations on Apple Silicon.

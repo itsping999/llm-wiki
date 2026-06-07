@@ -59,3 +59,20 @@ docker restart bind
 ![./assets/NotesDNS_Server_HandbookUntitled_4.png](../../raw/sources/handbooks/BIND/assets/NotesDNS_Server_HandbookUntitled_4.png)
 
 ![./assets/NotesDNS_Server_HandbookUntitled_5.png](../../raw/sources/handbooks/BIND/assets/NotesDNS_Server_HandbookUntitled_5.png)
+
+## Official Docs & Extensibility
+
+- Official docs
+  - BIND 9 documentation: [https://bind9.readthedocs.io/en/latest/](https://bind9.readthedocs.io/en/latest/)
+  - BIND 9 configuration reference: [https://bind9.readthedocs.io/en/latest/chapter3.html](https://bind9.readthedocs.io/en/latest/chapter3.html)
+  - BIND 9 ARM (Administrator Reference Manual): [https://bind9.readthedocs.io/en/latest/arm.html](https://bind9.readthedocs.io/en/latest/arm.html)
+
+- High-frequency entry points
+  - `named-checkconf` and `named-checkzone` should always be used before reloading BIND.
+  - Zone file syntax (SOA, NS, A, CNAME, MX) is the core knowledge; get comfortable with serial number conventions.
+  - `rndc reload` and `rndc flush` are the daily management commands.
+
+- Extensible directions
+  - Add DNSSEC signing and key management for production DNS.
+  - Cover views for split-horizon DNS (internal vs external resolution).
+  - Add TSIG-based zone transfers and dynamic DNS update patterns.

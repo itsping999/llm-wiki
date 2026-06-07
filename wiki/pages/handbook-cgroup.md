@@ -161,3 +161,20 @@ systemctl restart crond.service # 重新启动 crond.service
 再次查看 crond.service 的资源限制情况。
 
 ![./assets/Notescgroup_Handbookimage-20231226143421640.png](../../raw/sources/handbooks/Cgroup/assets/Notescgroup_Handbookimage-20231226143421640.png)
+
+## Official Docs & Extensibility
+
+- Official docs
+  - cgroups(7) man page: [https://man7.org/linux/man-pages/man7/cgroups.7.html](https://man7.org/linux/man-pages/man7/cgroups.7.html)
+  - Linux kernel cgroup docs: [https://www.kernel.org/doc/html/latest/admin-guide/cgroup-v2.html](https://www.kernel.org/doc/html/latest/admin-guide/cgroup-v2.html)
+  - systemd resource control: [https://www.freedesktop.org/software/systemd/man/latest/systemd.resource-control.html](https://www.freedesktop.org/software/systemd/man/latest/systemd.resource-control.html)
+
+- High-frequency entry points
+  - cgroup v2 is the modern unified hierarchy; prefer it over v1 for new deployments.
+  - CPU, memory, and I/O limits are the most commonly configured controllers.
+  - `systemctl set-property` and unit file directives are the easiest way to manage cgroups on systemd-based systems.
+
+- Extensible directions
+  - Add container runtime integration: how Docker/containerd/Kubernetes use cgroups.
+  - Cover pressure stall information (PSI) for modern resource monitoring.
+  - Add examples for OOM behavior, memory.high vs memory.max, and cpu.weight vs cpu.max.

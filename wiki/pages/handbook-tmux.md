@@ -264,3 +264,20 @@ tmux list-keys
 tmux info
 
 ```
+
+## Official Docs & Extensibility
+
+- Official docs
+  - tmux wiki: [https://github.com/tmux/tmux/wiki](https://github.com/tmux/tmux/wiki)
+  - tmux man page: [https://man7.org/linux/man-pages/man1/tmux.1.html](https://man7.org/linux/man-pages/man1/tmux.1.html)
+  - tmux FAQ: [https://github.com/tmux/tmux/wiki/FAQ](https://github.com/tmux/tmux/wiki/FAQ)
+
+- High-frequency entry points
+  - Sessions, windows, and panes are the three-level hierarchy; learn `attach/detach`, `new-window`, and `split-window` first.
+  - Prefix key (`Ctrl-b` by default) precedes every command; remap it if you use tmux heavily.
+  - `tmux capture-pane` and `tmux save-buffer` are useful for logging and sharing terminal output.
+
+- Extensible directions
+  - Add scripting with `tmux send-keys` and `tmux new-session -d` for automated dev environments.
+  - Explore tmux plugin manager (TPM) and popular plugins like resurrect and continuum.
+  - Add copy-mode vi bindings and clipboard integration for productivity.

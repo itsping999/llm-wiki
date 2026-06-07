@@ -29,3 +29,9 @@
 - changed: appended official documentation links, high-frequency usage notes, and extensibility directions to Docker, Kubernetes, Redis, MongoDB, MySQL, and Systemd handbook pages; added concept pages for containerization, Redis topology, MongoDB data modeling, and MySQL isolation; updated `wiki/index.md`
 - unresolved: MySQL and systemd official URLs were less reliable from this environment; linked stable official pages instead
 - next: add more cross-links between handbook and concept pages, and expand separate ops/debugging pages if usage grows
+
+## 2026-06-07 09:12 UTC | enrich all remaining component pages and add cross-cutting concepts
+- scope: complete enrichment of all 17 handbook pages and add 4 new cross-cutting concept pages
+- changed: appended official docs, high-frequency usage, and extensibility sections to Etcd, RabbitMQ, NFS, Cgroup, Tmux, Grep, Homebrew, ACME, BIND, Domain Certificate, and VFS handbook pages; added concept pages for DNS resolution, message queue patterns, Linux process management, and container orchestration; updated `wiki/index.md`
+- unresolved: some official doc URLs (NFS, cgroup, tmux, grep) were inaccessible from this environment; used alternative official references (man7.org, GitHub wiki, kernel.org)
+- next: cross-link handbook pages to concept pages; add more entity pages (e.g., specific tools, services) as usage patterns emerge

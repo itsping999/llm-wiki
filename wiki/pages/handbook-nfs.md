@@ -54,3 +54,20 @@ sudo apt install nfs-common
 # 挂载 nfs 共享目录到本地
 sudo mount.ntfs {{NFS_SERVER_IPADDR}}:{{FROM_DIR}} {{TO_DIR}}
 ```
+
+## Official Docs & Extensibility
+
+- Official docs
+  - NFS Wiki: [https://linux-nfs.org/wiki/index.php/Main_Page](https://linux-nfs.org/wiki/index.php/Main_Page)
+  - NFS man page: [https://man7.org/linux/man-pages/man5/exports.5.html](https://man7.org/linux/man-pages/man5/exports.5.html)
+  - NFS client mount options: [https://man7.org/linux/man-pages/man8/mount.nfs.8.html](https://man7.org/linux/man-pages/man8/mount.nfs.8.html)
+
+- High-frequency entry points
+  - `/etc/exports` and `exportfs -ra` are the server-side daily commands; `mount -t nfs` and `/etc/fstab` are the client side.
+  - NFSv4 is the recommended version for modern deployments; NFSv3 is still common in legacy setups.
+  - Always check `showmount -e <server>` before debugging mount failures.
+
+- Extensible directions
+  - Add NFSv4.1/pNFS for parallel I/O and better scalability.
+  - Cover Kerberos-based NFS security (`sec=krb5`) for production environments.
+  - Add troubleshooting for stale file handles, permission issues, and network partition behavior.

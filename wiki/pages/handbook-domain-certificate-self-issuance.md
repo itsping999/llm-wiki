@@ -89,3 +89,20 @@ acme.sh --renew -d test1.tunnel.iotbus.net -d *.test1.tunnel.iotbus.net --yes-I-
 # install cert
 acme.sh --installcert -d test1.tunnel.iotbus.net -d *.test1.tunnel.iotbus.net --fullchain-file /root/tunnel.pem --key-file /root/tunnel.key
 ```
+
+## Official Docs & Extensibility
+
+- Official docs
+  - OpenSSL documentation: [https://www.openssl.org/docs/](https://www.openssl.org/docs/)
+  - OpenSSL man pages: [https://man7.org/linux/man-pages/man1/openssl-req.1ossl.html](https://man7.org/linux/man-pages/man1/openssl-req.1ossl.html)
+  - cfssl (Cloudflare's PKI toolkit): [https://github.com/cloudflare/cfssl](https://github.com/cloudflare/cfssl)
+
+- High-frequency entry points
+  - `openssl req -new -x509` for self-signed certs and `openssl s_client -connect` for debugging are the most used commands.
+  - Understand the chain: CA cert -> intermediate -> leaf cert; most TLS errors are chain-related.
+  - Certificate expiration monitoring is critical; automate checks even for self-issued certs.
+
+- Extensible directions
+  - Add SAN (Subject Alternative Name) and wildcard certificate patterns.
+  - Cover internal CA setup with step-ca or smallstep for microservice mTLS.
+  - Add certificate rotation automation and Kubernetes cert-manager integration.

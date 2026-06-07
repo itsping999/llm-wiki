@@ -533,3 +533,20 @@ type revision struct {
 - VERSION：表示 KV 的版本号，初始值为 1，每次修改 KV 对应的 VERSION 都会加 1，也就是说它是作用于 KV 之内的；
 
 # **DONE**
+
+## Official Docs & Extensibility
+
+- Official docs
+  - etcd documentation: [https://etcd.io/docs/v3.6/](https://etcd.io/docs/v3.6/)
+  - etcd getting started: [https://etcd.io/docs/v3.6/introduction/](https://etcd.io/docs/v3.6/introduction/)
+  - etcd API reference: [https://etcd.io/docs/v3.6/learning/api/](https://etcd.io/docs/v3.6/learning/api/)
+
+- High-frequency entry points
+  - etcd is the backing store for Kubernetes; understanding its consistency model (Raft consensus) helps debug cluster state issues.
+  - Use `etcdctl endpoint health` and `etcdctl endpoint status` for quick cluster checks.
+  - Snapshot backup/restore is critical for disaster recovery: `etcdctl snapshot save` / `etcdctl snapshot restore`.
+
+- Extensible directions
+  - Add watch/lease/TTL patterns for service discovery and distributed locking.
+  - Explore etcd's role in Kubernetes: how API server uses etcd, and how to tune compaction/defrag.
+  - Add security topics: TLS for peer/client auth, role-based access control.
