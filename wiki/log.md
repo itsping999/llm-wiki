@@ -11,3 +11,9 @@
 - changed: copied 17 markdown handbooks and 38 image assets into `raw/sources/handbooks`; generated 17 source pages; updated `wiki/index.md`
 - unresolved: user requested `~/handbook`, but local path exists as `~/handbooks`; import used `~/handbooks`
 - next: extract concept/entity pages when queries need cross-handbook synthesis
+
+## 2026-06-07 06:29 UTC | query redis sentinel configuration
+- scope: answer Redis Sentinel configuration from `[[handbook-redis]]`
+- changed: added `[[query-redis-sentinel-config]]` with a reusable Sentinel setup checklist and updated `wiki/index.md`
+- unresolved: exact deployment IPs, Redis version, ACL policy, and Docker/NAT topology are environment-specific
+- next: adapt the template values before applying to a live Redis deployment

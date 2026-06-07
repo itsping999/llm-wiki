@@ -32,4 +32,4 @@ No entity pages extracted yet.
 
 ## Analyses / Queries
 
-No analysis or query pages saved yet.
+- [[query-redis-sentinel-config]] - Redis Sentinel configuration query
