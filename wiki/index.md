@@ -33,3 +33,4 @@ No entity pages extracted yet.
 ## Analyses / Queries
 
 - [[query-redis-sentinel-config]] - Redis Sentinel configuration query
+- [[query-mysql-knowledge-map]] - MySQL source coverage and knowledge map

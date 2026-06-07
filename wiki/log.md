@@ -17,3 +17,9 @@
 - changed: added `[[query-redis-sentinel-config]]` with a reusable Sentinel setup checklist and updated `wiki/index.md`
 - unresolved: exact deployment IPs, Redis version, ACL policy, and Docker/NAT topology are environment-specific
 - next: adapt the template values before applying to a live Redis deployment
+
+## 2026-06-07 06:37 UTC | query mysql knowledge map
+- scope: summarize MySQL knowledge coverage from `[[handbook-mysql]]`
+- changed: added `[[query-mysql-knowledge-map]]` and updated `wiki/index.md`
+- unresolved: current source is thin on optimizer practice, replication/HA, MySQL 8 specifics, and performance troubleshooting
+- next: add targeted sources or query pages for MySQL indexing, slow query analysis, and replication when needed
