@@ -678,3 +678,20 @@ redis-cli -h {{SOURCE_HOST}} -a {{PASSWORD}} config set appendonly no
 ```
 
 # **DONE**
+
+## Official Docs & Extensibility
+
+- Official docs
+  - Data types overview: [https://redis.io/docs/latest/develop/data-types/](https://redis.io/docs/latest/develop/data-types/)
+  - Commands: [https://redis.io/docs/latest/commands/](https://redis.io/docs/latest/commands/)
+  - Documentation home: [https://redis.io/docs/](https://redis.io/docs/)
+
+- High-frequency entry points
+  - If you use Redis for caching, review TTL handling, `SET ... NX/XX`, and key naming conventions early.
+  - For queues and streaming, check List operations, blocking commands, and Streams before inventing custom pub/sub glue.
+  - Sentinel and Cluster are separate mental models; pick based on whether you need high availability or sharding.
+
+- Extensible directions
+  - Add JSON, search, time series, probabilistic structures, and scripting if Redis becomes more than a cache.
+  - For operations, extend into persistence, eviction policy, latency troubleshooting, and key-space analysis.
+  - If the repo grows, split dev-focused commands from ops-focused deployment and troubleshooting content.

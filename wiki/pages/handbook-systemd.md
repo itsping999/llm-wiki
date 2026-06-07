@@ -194,3 +194,21 @@ systemd 将会从一组在编译时设定好的 unit 目录中加载单元文件
 | /run/systemd/user | 运行时配置的全局用户单元 |
 | /usr/lib/systemd/user | 本地软件包安装的全局用户单元 |
 | /usr/lib/systemd/user | 发行版软件包安装的全局用户单元 |
+
+## Official Docs & Extensibility
+
+- Official docs
+  - systemd home: [https://systemd.io/](https://systemd.io/)
+  - systemd.service man page: [https://www.freedesktop.org/software/systemd/man/latest/systemd.service.html](https://www.freedesktop.org/software/systemd/man/latest/systemd.service.html)
+  - systemctl man page: [https://www.freedesktop.org/software/systemd/man/latest/systemctl.html](https://www.freedesktop.org/software/systemd/man/latest/systemctl.html)
+  - journalctl man page: [https://www.freedesktop.org/software/systemd/man/latest/journalctl.html](https://www.freedesktop.org/software/systemd/man/latest/journalctl.html)
+
+- High-frequency entry points
+  - Use `systemctl status`, `journalctl -u`, and `systemd-analyze blame` together when debugging boot or service issues.
+  - Prefer `systemctl reload` over restart when the service supports it.
+  - If a unit behaves strangely, check `systemctl show` and unit file load path before editing the wrong file.
+
+- Extensible directions
+  - Expand into timers, socket activation, user units, and cgroup-based resource control if systemd becomes central to operations.
+  - If this wiki grows, separate service authoring from runtime troubleshooting.
+  - Add examples for restart policies, environment files, and hardening directives when a service is promoted from toy to production use.

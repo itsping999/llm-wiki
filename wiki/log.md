@@ -23,3 +23,9 @@
 - changed: added `[[query-mysql-knowledge-map]]` and updated `wiki/index.md`
 - unresolved: current source is thin on optimizer practice, replication/HA, MySQL 8 specifics, and performance troubleshooting
 - next: add targeted sources or query pages for MySQL indexing, slow query analysis, and replication when needed
+
+## 2026-06-07 08:35 UTC | enrich high-frequency component knowledge
+- scope: enrich frequently used component wiki pages and add reusable concept pages
+- changed: appended official documentation links, high-frequency usage notes, and extensibility directions to Docker, Kubernetes, Redis, MongoDB, MySQL, and Systemd handbook pages; added concept pages for containerization, Redis topology, MongoDB data modeling, and MySQL isolation; updated `wiki/index.md`
+- unresolved: MySQL and systemd official URLs were less reliable from this environment; linked stable official pages instead
+- next: add more cross-links between handbook and concept pages, and expand separate ops/debugging pages if usage grows

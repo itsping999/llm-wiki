@@ -740,3 +740,20 @@ wget <https://projectcalico.docs.tigera.io/archive/v3.25/manifests/calico.yaml>
 kubectl apply -f calico.yaml
 
 ```
+
+## Official Docs & Extensibility
+
+- Official docs
+  - kubectl reference: [https://kubernetes.io/docs/reference/kubectl/](https://kubernetes.io/docs/reference/kubectl/)
+  - kubectl command reference: [https://kubernetes.io/docs/reference/kubectl/generated/kubectl/](https://kubernetes.io/docs/reference/kubectl/generated/kubectl/)
+  - Cheat sheet: [https://kubernetes.io/docs/reference/kubectl/cheatsheet/](https://kubernetes.io/docs/reference/kubectl/cheatsheet/)
+
+- High-frequency entry points
+  - Use `-o wide`, `-o yaml`, and `kubectl describe` together when debugging workloads instead of relying on one view.
+  - For rollout work, prefer `kubectl rollout status`, `kubectl rollout history`, and `kubectl rollout undo` over manual recreation.
+  - Namespace discipline matters: default to `-n <env>` or `--all-namespaces` only when needed.
+
+- Extensible directions
+  - Add context management, kubeconfig organization, and short aliases if you switch clusters often.
+  - Expand beyond core workloads into debugging with `kubectl events`, `kubectl logs`, `kubectl exec`, and `kubectl port-forward`.
+  - If this repo keeps growing, consider separate pages for networking, storage, and security workflows.

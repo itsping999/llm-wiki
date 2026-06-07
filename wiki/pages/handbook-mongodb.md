@@ -476,3 +476,21 @@ mongosh --tls --host {{HOSTNAME}} --tlsCAFile {{TLS_CA_FILE}} --tlsCertificateKe
 ```
 
 # DONE
+
+## Official Docs & Extensibility
+
+- Official docs
+  - MongoDB Manual: [https://www.mongodb.com/docs/manual/](https://www.mongodb.com/docs/manual/)
+  - CRUD: [https://www.mongodb.com/docs/manual/crud/](https://www.mongodb.com/docs/manual/crud/)
+  - Aggregation: [https://www.mongodb.com/docs/manual/aggregation/](https://www.mongodb.com/docs/manual/aggregation/)
+  - Indexes: [https://www.mongodb.com/docs/manual/indexes/](https://www.mongodb.com/docs/manual/indexes/)
+
+- High-frequency entry points
+  - Query with projection and sort early; `find`, `aggregate`, and index-aware filters are the everyday tools.
+  - Use schema validation and bounded collections if documents are likely to drift.
+  - For operational safety, review explain plans, index usage, and compaction before scaling.
+
+- Extensible directions
+  - Add change streams, transactions, and Atlas-related workflows if the wiki expands beyond local dev.
+  - Separate modeling patterns from shell cheats: embedded docs vs references, bucket patterns, and time-series collections.
+  - If needed, add separate pages for backup/restore, sharding, and replica set operations.

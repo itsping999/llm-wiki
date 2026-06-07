@@ -333,3 +333,20 @@ mysqlbinlog --stop-position="102" {{BINLOG_FILEPATH}} | mysql -uroot -p
 ```
 
 # **DONE**
+
+## Official Docs & Extensibility
+
+- Official docs
+  - MySQL 8.0 Reference Manual: [https://dev.mysql.com/doc/refman/8.0/en/](https://dev.mysql.com/doc/refman/8.0/en/)
+  - InnoDB storage engine docs: [https://dev.mysql.com/doc/refman/8.0/en/innodb-storage-engine.html](https://dev.mysql.com/doc/refman/8.0/en/innodb-storage-engine.html)
+  - Transaction isolation levels: [https://dev.mysql.com/doc/refman/8.0/en/innodb-transaction-isolation-levels.html](https://dev.mysql.com/doc/refman/8.0/en/innodb-transaction-isolation-levels.html)
+
+- High-frequency entry points
+  - For day-to-day SQL, focus on EXPLAIN, index selection, and transaction isolation behavior before chasing internals.
+  - If this page is used operationally, pair lock/undo/redo knowledge with concrete `SHOW ENGINE INNODB STATUS`, slow query log, and backup commands.
+  - `mysqldump` and binlog recovery are often enough for smaller environments, but not for large-scale restore alone.
+
+- Extensible directions
+  - Expand into partitioning, JSON functions, window functions, and performance schema if needed.
+  - Separate dev-facing SQL modeling from ops-facing replication, backup, and failover playbooks.
+  - If the repo grows, add a dedicated troubleshooting page for deadlocks, metadata locks, and replication lag.

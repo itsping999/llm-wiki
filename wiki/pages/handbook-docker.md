@@ -244,3 +244,20 @@ docker volume --filter "dangling=true"
 docker volume rm $(docker volume -qf "dangling=true")
 
 ```
+
+## Official Docs & Extensibility
+
+- Official docs
+  - Docker overview: [https://docs.docker.com/get-started/docker-overview/](https://docs.docker.com/get-started/docker-overview/)
+  - Docker Compose overview: [https://docs.docker.com/compose/](https://docs.docker.com/compose/)
+  - Docker CLI reference: [https://docs.docker.com/reference/cli/docker/](https://docs.docker.com/reference/cli/docker/)
+
+- High-frequency entry points
+  - Compose is the daily driver: use `docker compose up -d --build`, `docker compose logs -f <service>`, and `docker compose exec <service> sh` to stay in one workflow.
+  - Debug containers with `docker inspect`, `docker logs --since 10m`, and `docker exec` before rebuilding.
+  - For cleanup, combine `docker system prune -a --volumes` with explicit volume checks so you do not delete data you still need.
+
+- Extensible directions
+  - Use Compose profiles, healthchecks, and dependency ordering to model local multi-service stacks.
+  - Add Buildx and multi-platform builds when you need cross-arch images.
+  - Move from ad hoc commands to Dockerfile best practices and image scanning if the repo grows.
